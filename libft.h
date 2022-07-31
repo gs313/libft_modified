@@ -6,7 +6,7 @@
 /*   By: sicharuk <sicharuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 09:51:38 by sicharuk          #+#    #+#             */
-/*   Updated: 2022/07/23 10:15:51 by sicharuk         ###   ########.fr       */
+/*   Updated: 2022/07/31 21:42:02 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,16 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-/*Libc function*/
-int		isalpha(int c);
-int		isdigit(int c);
-int		isnumber(int c);
-int		isascii(int c);
+/*Libc function not done yet*/
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isnumber(int c);
+int		ft_isascii(int c);
+int		ft_isprint(int c);
+size_t	ft_strlen(const char *s);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
 
 /*Additional function*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);

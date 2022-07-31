@@ -6,13 +6,14 @@
 /*   By: sicharuk <sicharuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 10:12:33 by sicharuk          #+#    #+#             */
-/*   Updated: 2022/07/23 10:19:37 by sicharuk         ###   ########.fr       */
+/*   Updated: 2022/07/31 21:01:19 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_isalpha(int c){
+int	ft_isalpha(int c)
+{
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
