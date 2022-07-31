@@ -6,7 +6,7 @@
 /*   By: sicharuk <sicharuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 09:51:38 by sicharuk          #+#    #+#             */
-/*   Updated: 2022/07/31 22:24:22 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/07/31 23:48:30 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 
 /*Additional function*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
