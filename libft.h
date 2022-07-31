@@ -6,7 +6,7 @@
 /*   By: sicharuk <sicharuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 09:51:38 by sicharuk          #+#    #+#             */
-/*   Updated: 2022/07/31 21:42:02 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/07/31 22:24:22 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ typedef struct s_list
 /*Libc function not done yet*/
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
-int		ft_isnumber(int c);
+int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
