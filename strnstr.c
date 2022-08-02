@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 01:20:53 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 01:49:53 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 01:52:46 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 			j++;
 		else
 			j = 0;
-		if (!needle[j])
+		if (!needle[j] || j == len)
 			return ((char *)haystack + i);
 		i++;
 	}
