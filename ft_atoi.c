@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 02:16:53 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 02:39:12 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 02:45:22 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	ft_atoi(const char *str)
 		minus = -1;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
-	while(str[i])
+	while(str[i] <= '9' && str[i] >= '0')
 	{
-		ans = ans * 10 + (str[i] - '0');
+		ans = (ans * 10) + (str[i] - '0');
 		i++;
 	}
 	return (ans * minus);
