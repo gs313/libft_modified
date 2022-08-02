@@ -6,13 +6,13 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 02:47:05 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 02:54:29 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 02:56:35 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void *a;
 
