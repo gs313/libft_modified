@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 23:34:28 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/02 23:37:59 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/02 23:38:51 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (*s == (char) c)
 		{
-			return (s);
+			return ((char *)s);
 		}
 	}
 	return (0);
