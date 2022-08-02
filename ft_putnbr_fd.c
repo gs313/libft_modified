@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 04:25:04 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 04:33:11 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 04:34:40 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, "-", 1);
 		n = -n;
 	}
-	ft_putnbr_fd(n/10, fd);
+	if(n > 10)
+		ft_putnbr_fd(n/10, fd);
 	ft_putchar_fd((n % 10)+'0', fd);
 }
