@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 03:14:57 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 04:18:11 by scharuka         ###   ########.fr       */
+/*   Created: 2022/08/03 04:18:41 by scharuka          #+#    #+#             */
+/*   Updated: 2022/08/03 04:20:18 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*ans;
-	size_t	i;
-	size_t	reallen;
-
-	i = 0;
-	reallen = len;
-	if (start > ft_strlen(s))
-		reallen = 0;
-	else if (ft_strlen(s) - start < len)
-		reallen = ft_strlen(s) - start;
-	ans = malloc(sizeof(char) * (reallen + 1));
-	if (!ans)
-		return(NULL);
-	ans = ft_memcpy(ans, (s + start), reallen);
-	ans[reallen] = '\0';
-	return(ans);
+	write(fd, &c, 1);
 }

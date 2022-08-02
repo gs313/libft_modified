@@ -1,33 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 03:14:57 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 04:18:11 by scharuka         ###   ########.fr       */
+/*   Created: 2022/08/03 04:25:04 by scharuka          #+#    #+#             */
+/*   Updated: 2022/08/03 04:33:11 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*ans;
-	size_t	i;
-	size_t	reallen;
-
-	i = 0;
-	reallen = len;
-	if (start > ft_strlen(s))
-		reallen = 0;
-	else if (ft_strlen(s) - start < len)
-		reallen = ft_strlen(s) - start;
-	ans = malloc(sizeof(char) * (reallen + 1));
-	if (!ans)
-		return(NULL);
-	ans = ft_memcpy(ans, (s + start), reallen);
-	ans[reallen] = '\0';
-	return(ans);
+	if (n == -2147483648)
+		write(fd, "-2147483648", 11);
+	if(n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	ft_putnbr_fd(n/10, fd);
+	ft_putchar_fd((n % 10)+'0', fd);
 }
