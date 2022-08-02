@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 02:16:53 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 02:38:29 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 02:39:12 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	ans = 0;
+	minus = 1;
 	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')
