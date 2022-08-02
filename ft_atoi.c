@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 02:16:53 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 02:36:56 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 02:38:29 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,5 @@ int	ft_atoi(const char *str)
 		ans = ans * 10 + (str[i] - '0');
 		i++;
 	}
-	return (ans);
+	return (ans * minus);
 }
