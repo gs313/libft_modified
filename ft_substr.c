@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 03:14:57 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 04:01:26 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 04:02:00 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
-	if (!s || !s[0] || ft_strlen(s) <= start)
-		return (NULL);
 	ans = malloc(sizeof(char) * (len + 1));
 	if (!ans)
 		return(NULL);
