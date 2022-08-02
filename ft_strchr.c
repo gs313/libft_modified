@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 23:34:28 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/02 23:47:44 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/02 23:51:30 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (!c)
+	size_t	i;
+
+	i = 0;
+	while (i <= ft_strlen(s))
 	{
-		return ((char *)s + ft_strlen(s));
-	}
-	while (!*s)
-	{
-		if (*(unsigned char *)s == (unsigned char) c)
-		{
-			return ((char *)s);
-		}
-		s++;
+		if (s[i] ==  (char)c)
+			return ((char *)s + i);
+		i++;
 	}
 	return (0);
 }
