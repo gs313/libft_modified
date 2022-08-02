@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 03:01:37 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 03:11:48 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 03:13:43 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,6 @@ char	*ft_strdup(const char *s1)
 		str[i] = s1[i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
