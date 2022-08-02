@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 23:53:22 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 00:06:38 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 00:08:41 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,9 @@
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-	size_t len;
 	
 	i = 0;
-	len = ft_strlen(s1);
-	if (len < ft_strlen(s2))
-		len = ft_strlen(s2);
-	if (n < len)
-		len = n;
-	while(i < len)
+	while(i < n && (!s1[i] || !s2[i]))
 	{
 		if(s1[i] != s2[i])
 		{
