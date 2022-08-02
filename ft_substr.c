@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 03:14:57 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 04:02:00 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 04:05:03 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ans = malloc(sizeof(char) * (len + 1));
 	if (!ans)
 		return(NULL);
-	ans = ft_memcpy(ans, (s + start), len + 1);
+	ans = ft_memcpy(ans, (s + start), len);
+	ans[len - 1] = '\0';
 	return(ans);
 }
