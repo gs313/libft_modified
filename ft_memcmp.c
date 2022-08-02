@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 01:01:49 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 01:14:13 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/03 01:16:52 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 			return((int)(((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]));
 		i++;
 	}
-	return (0);
+	return ((int)(((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]));
 }
