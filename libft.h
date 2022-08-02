@@ -6,7 +6,7 @@
 /*   By: sicharuk <sicharuk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 09:51:38 by sicharuk          #+#    #+#             */
-/*   Updated: 2022/08/01 06:20:05 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/02 22:11:22 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-/*Libc function not done yet*/
+/*Libc function*/
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
