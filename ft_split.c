@@ -6,7 +6,7 @@
 /*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 16:34:23 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/19 17:01:59 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/19 22:39:12 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*wordcpy(char const *s, char c)
 	char	*temp;
 
 	wl = word_length(s, c);
-	temp = malloc(wl * sizeof(char));
+	temp = malloc((wl + 1) * sizeof(char));
 	ft_memcpy(temp, s, wl);
 	temp[wl] = '\0';
 	return (temp);
@@ -62,6 +62,8 @@ char	**ft_split(char const *s, char c)
 
 	wc = word_count(s, c);
 	ans = malloc (sizeof(char *) * (wc + 1));
+	if (!ans)
+		return (NULL);
 	ac = 0;
 	while (*s)
 	{
@@ -77,3 +79,12 @@ char	**ft_split(char const *s, char c)
 	ans[wc] = NULL;
 	return (ans);
 }
+/*
+#include<stdio.h>
+int main()
+{
+		char *a;
+		a = "s b d k";
+		size_t n= word_count( a, ' ');
+		printf("%zu",n);
+}*/
