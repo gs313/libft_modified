@@ -6,13 +6,13 @@
 /*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 16:34:23 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/19 22:39:12 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/19 23:43:09 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	word_length(char const *s, char c)
+static size_t	word_length(char const *s, char c)
 {
 	size_t	l;
 
@@ -25,7 +25,7 @@ size_t	word_length(char const *s, char c)
 	return (l);
 }
 
-size_t	word_count(char const *s, char c)
+static size_t	word_count(char const *s, char c)
 {
 	size_t	count;
 
@@ -42,7 +42,7 @@ size_t	word_count(char const *s, char c)
 	return (count);
 }
 
-char	*wordcpy(char const *s, char c)
+static char	*wordcpy(char const *s, char c)
 {
 	size_t	wl;
 	char	*temp;
@@ -79,12 +79,3 @@ char	**ft_split(char const *s, char c)
 	ans[wc] = NULL;
 	return (ans);
 }
-/*
-#include<stdio.h>
-int main()
-{
-		char *a;
-		a = "s b d k";
-		size_t n= word_count( a, ' ');
-		printf("%zu",n);
-}*/
