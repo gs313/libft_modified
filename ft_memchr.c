@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 00:52:40 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/03 01:00:32 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/19 17:04:28 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (*((unsigned char *)s + i) == (unsigned char)c)
-			return (void *)(s + i);
+			return ((void *)(s + i));
 		i++;
 	}
 	return (0);

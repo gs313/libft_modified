@@ -6,7 +6,7 @@
 /*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 16:34:23 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/13 17:33:49 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/19 17:01:59 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ size_t	word_length(char const *s, char c)
 	l = 0;
 	while (*s && *s != c)
 	{
+			s++;
 			l++;
 	}
 	return (l);
@@ -60,7 +61,7 @@ char	**ft_split(char const *s, char c)
 	size_t	ac;
 
 	wc = word_count(s, c);
-	ans = malloc (sizeof(char *) * wc);
+	ans = malloc (sizeof(char *) * (wc + 1));
 	ac = 0;
 	while (*s)
 	{
@@ -73,5 +74,6 @@ char	**ft_split(char const *s, char c)
 		while (*s != c && *s)
 			s++;
 	}
+	ans[wc] = NULL;
 	return (ans);
 }

@@ -6,7 +6,7 @@
 /*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/31 23:48:54 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/01 06:11:39 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/19 17:13:01 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (dst == NULL && src == NULL)
-		return (dst);
+	if (!dst && !src)
+		return (NULL);
 	if (dst > src)
 	{
 		while (len-- > 0)
@@ -25,6 +25,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 		while (len-- > 0)
-			*(unsigned char *)dst++ = *(unsigned char *)src++;
+			*(unsigned char *)dst++ = *(char *)src++;
 	return (dst);
 }
