@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 22:14:38 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/12 15:45:03 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/19 17:32:58 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t srclen;
+	size_t	i;
+	size_t	srclen;
 
 	i = 0;
 	srclen = ft_strlen(src);
