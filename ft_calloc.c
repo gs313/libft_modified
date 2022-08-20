@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 02:47:05 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/19 17:03:52 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/20 10:02:17 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*a;
 
+	if (count == SIZE_MAX || size == SIZE_MAX)
+		return (NULL);
 	a = (void *)malloc(count * size);
 	if (!a)
 		return (NULL);

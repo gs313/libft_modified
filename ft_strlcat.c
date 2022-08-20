@@ -6,7 +6,7 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 23:11:42 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/12 15:58:35 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/20 10:56:14 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	start;
 
 	i = ft_strlen(dst);
-	if (i > dstsize)
-		i = dstsize;
+	if (i >= dstsize)
+		return (dstsize + ft_strlen(src));
 	start = i;
 	if (dstsize != 0)
 	{
@@ -28,11 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 			dst[i] = src[i - start];
 			i++;
 		}
-		while (i < dstsize)
-		{
 			dst[i] = '\0';
-			i++;
-		}
 	}
 	return (start + ft_strlen(src));
 }
