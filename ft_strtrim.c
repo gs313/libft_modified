@@ -6,13 +6,13 @@
 /*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/12 15:59:37 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/12 16:33:57 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/20 08:01:42 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	check_set(char const *set, char const c)
+static size_t	check_set(char const *set, char const c)
 {
 	size_t	i;
 
