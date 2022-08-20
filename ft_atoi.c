@@ -6,13 +6,13 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 02:16:53 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/19 17:35:42 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/20 11:01:08 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	ft_isspace(const char c)
+static int	ft_isspace(const char c)
 {
 	if (c == '\r' || c == '\n' || c == '\f'
 		|| c == '\v' || c == '\t' || c == ' ' )
