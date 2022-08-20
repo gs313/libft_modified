@@ -6,13 +6,13 @@
 /*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:55:02 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/19 23:40:45 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/20 08:13:22 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-size_t	digit_needed(long long n)
+static size_t	digit_needed(long long n)
 {
 	int	digit;
 
@@ -32,18 +32,6 @@ size_t	digit_needed(long long n)
 	return (digit);
 }
 
-void	check_itoa(int n, char **ans)
-{
-	if (n == -2147483648)
-	{
-		*ans = "-2147483648";
-	}
-	if (n == 0)
-	{
-		*ans = "0";
-	}	
-}
-
 char	*ft_itoa(int n)
 {
 	char		*ans;
@@ -53,6 +41,8 @@ char	*ft_itoa(int n)
 	nb = n;
 	dg = digit_needed(nb);
 	ans = malloc((dg + 1) * sizeof(char));
+	if (!ans)
+		return (NULL);
 	if (nb < 0)
 	{
 		ans[0] = '-';

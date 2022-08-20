@@ -6,7 +6,7 @@
 /*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 22:43:50 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/19 22:54:18 by scharuka         ###   ########.fr       */
+/*   Updated: 2022/08/20 08:13:26 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 	char	*ans;
 
+	if (!s)
+		return (NULL);
 	i = 0;
 	l = ft_strlen(s);
 	ans = malloc (sizeof(char) * (l + 1));
+	if (!ans)
+		return (NULL);
 	while (i < l)
 	{
 		ans[i] = f(i, s[i]);
