@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/27 15:01:40 by scharuka          #+#    #+#             */
-/*   Updated: 2022/12/29 15:47:19 by scharuka         ###   ########.fr       */
+/*   Created: 2023/01/05 13:41:02 by scharuka          #+#    #+#             */
+/*   Updated: 2023/09/05 14:58:17 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,27 +76,27 @@ char	*initial(char **stbuff)
 
 char	*get_next_line(int fd)
 {
-	static char	*stbuff;
+	static char	*stbuff[OPEN_MAX + 1];
 	char		*line;
 	int			byte;
 
 	byte = 1;
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 		return (NULL);
-	line = initial(&stbuff);
+	line = initial(&stbuff[fd]);
 	while (1)
 	{
-		line = check_stbuff(stbuff, line);
-		if (stbuff == NULL || ft_strchr(line, '\n') || byte == 0)
+		line = check_stbuff(stbuff[fd], line);
+		if (stbuff[fd] == NULL || ft_strchr(line, '\n') || byte == 0)
 			break ;
-		byte = read(fd, stbuff, BUFFER_SIZE);
+		byte = read(fd, stbuff[fd], BUFFER_SIZE);
 		if (byte < 0)
 			return (NULL);
-		stbuff[byte] = '\0';
+		stbuff[fd][byte] = '\0';
 	}
 	if (line[0] == '\0')
 		line = free_stbuff(line);
 	if (line == NULL || byte == 0)
-		stbuff = free_stbuff(stbuff);
+		stbuff[fd] = free_stbuff(stbuff[fd]);
 	return (line);
 }

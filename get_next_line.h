@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: scharuka <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 14:57:40 by scharuka          #+#    #+#             */
-/*   Updated: 2023/01/05 14:13:39 by scharuka         ###   ########.fr       */
+/*   Created: 2023/01/05 13:59:45 by scharuka          #+#    #+#             */
+/*   Updated: 2023/09/05 14:57:47 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 # include <sys/uio.h>
 # include <fcntl.h>
 # include <stddef.h>
+# include <limits.h>
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(const char *s);

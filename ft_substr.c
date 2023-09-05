@@ -6,21 +6,19 @@
 /*   By: scharuka <scharuka@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 03:14:57 by scharuka          #+#    #+#             */
-/*   Updated: 2022/08/20 08:07:56 by scharuka         ###   ########.fr       */
+/*   Updated: 2023/09/05 14:52:20 by scharuka         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ans;
-	size_t	i;
 	size_t	reallen;
 
 	if (s == NULL)
 		return (NULL);
-	i = 0;
 	reallen = len;
 	if (start > ft_strlen(s))
 		reallen = 0;
